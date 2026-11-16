@@ -1,0 +1,17 @@
+*.o
+animator
+test_curves
+movie/*.bmp
+.vs/
+*.VC.db
+*.ncb
+*.sdf
+*.suo
+*.suo.old
+*.opt
+*.plg
+*.user
+UpgradeLog.XML
+UpgradeLog.htm
+.DS_Store
+tree.tga

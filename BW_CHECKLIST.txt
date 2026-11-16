@@ -1,0 +1,66 @@
+COMP 4411 Project 4 — Bells and Whistles checklist
+Model: Project 2 hierarchical cat (robotarm.cpp)
+Animation: animator.ani + animator.ani.cam (20 seconds)
+Movie frames: movie/frame0.bmp through movie/frame240.bmp (960x540, 12 fps)
+and cat_animation.mp4 (about 20 seconds)
+
+Open the project folder and run ./animator. If animator.ani is present, the
+program loads it, turns on Simulate, and plays. Press Play again after it
+stops. Curves are used during playback even if the Controls tab is showing.
+
+REQUIRED
+[x] Bezier curves, C0 segments, wrapping
+[x] B-spline curves, wrapping
+[x] Catmull-Rom curves, wrapping, samples kept increasing in x
+[x] Particle system on a non-root node
+    Fire leaves the mouth. Water leaves the front-left paw and inherits
+    that paw's velocity. Gravity is world down.
+[x] Euler integration (RK4 is optional, slider "RK4 integrator")
+[x] Baking. The grey bar above the time slider is the baked range.
+    Clear Sim. throws the bake away.
+[x] Project 2 model, with endDraw() at the end of draw()
+
+WHERE THE CURVE TYPES ARE USED IN animator.ani
+- Bezier: Y position, stretch, sit, pounce
+- B-spline: Z position, wind
+- Catmull-Rom: head yaw, head pitch, tail base / mid / tip, anim speed
+- C2-interpolating: X position, dramatic light
+- Linear: walk / groom mode changes and the particle-count ramp
+
+The 20-second shot uses anticipation (two crouches), squash and stretch,
+a jump, tail follow-through, a groom, then fire, water, and snow.
+
+WHISTLES
+[x] Catmull-Rom tension slider, and t / T with the graph focused
+[x] B-spline degree 4 and 5 (C3 / C4). Keys 3, 4, 5 or the degree slider
+[x] Lane-Riesenfeld subdivision on the B-spline type. Key l, or the slider.
+    The point count is printed.
+[x] C2 endpoint derivatives. Clamped-ends slider, or n / y / u / i / o
+[x] Bezier continuity 0 = C0, 1 = C1, 2 = free. Key c or the slider
+[x] Adaptive de Casteljau Bezier. Key a, flatness with [ and ].
+    The generated point count is printed. Off in the saved animation.
+[x] Transparent TGA trees. tree.tga is written the first time they draw.
+[x] Stencil mirror on the left (x = -7), reflection clipped to the glass
+[x] Billboard fire (additive), water, and snow, with alpha textures
+[x] Sphere-map environment mapping on the chrome sphere
+[x] Skybox
+[x] Runge-Kutta 4. Slider "RK4 integrator". The saved animation uses Euler.
+[x] Display list for the food bowl. The list id is printed once.
+[x] Quaternion camera. Alt+right-drag twists without gimbal lock.
+    Camera keyframes still use the Euler curves.
+
+BELLS
+[x] Springs: cable from the front-left paw (the claw emitter)
+[x] Spring cloth pinned across the torso
+[x] Spring fur on the torso, with gravity, wind, and collision against
+    the ground and the chrome sphere
+[x] Water droplets bounce off each other
+[x] Heightfield terrain around the cat
+[x] C2-interpolating curves, including the natural and periodic cases
+[x] Boids: 16 pyramids that show which way they fly
+
+NOT IMPLEMENTED
+Inverse kinematics, rigid bodies, interactive torque control, motion
+warping, cell shading, subdivision surfaces, B-spline surfaces, projected
+textures, lens flare, metaballs, motion blur, picking, and Catmull-Rom
+Bezier handles.
