@@ -1,8 +1,8 @@
 COMP 4411 Project 4 — Bells and Whistles checklist
 Model: Project 2 hierarchical cat (robotarm.cpp)
-Animation: animator.ani + animator.ani.cam (20 seconds)
-Movie frames: movie/frame0.bmp through movie/frame240.bmp (960x540, 12 fps)
-and cat_animation.mp4 (about 20 seconds)
+Animation: animator.ani + animator.ani.cam (about 29 seconds)
+Movie frames: movie/frame0.bmp through movie/frame344.bmp (960x540, 12 fps)
+and cat_animation.mp4 (28.8 seconds)
 
 Open the project folder and run ./animator. If animator.ani is present, the
 program loads it, turns on Simulate, and plays. Press Play again after it
@@ -27,7 +27,7 @@ WHERE THE CURVE TYPES ARE USED IN animator.ani
 - C2-interpolating: X position, dramatic light
 - Linear: walk / groom mode changes and the particle-count ramp
 
-The 20-second shot uses anticipation (two crouches), squash and stretch,
+The shot runs just under 29 seconds: anticipation, a walk, squash and stretch,
 a jump, tail follow-through, a groom, then fire, water, and snow.
 
 WHISTLES

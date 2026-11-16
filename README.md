@@ -1,6 +1,6 @@
 # A Very Small Cat, Having a Day
 
-A 20-second computer-graphics animation of a boxy orange cat: she crouches, walks, pounces, grooms one paw, and then sits by her food bowl while fire, water, and snow drift around her.
+A 29-second computer-graphics animation of a boxy orange cat: she looks around, crouches, walks, leaps, grooms one paw, and then sits by her food bowl while fire, water, and snow drift around her.
 
 Made for **COMP 4411 Computer Graphics**, Fall 2026, at **The Hong Kong University of Science and Technology**.
 

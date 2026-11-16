@@ -692,7 +692,9 @@ void CatModel::drawWorld()
 		kneeFRAdd = 6.0f;
 		modeSpine = 6.0f;
 		break;
-	default: // Idle breathe / ear flick handled below
+	default: // Idle: a small look-around so she isn't a statue
+		modeHeadYaw = anim * 5.0f;
+		modeHeadPitch = anim2 * 2.0f;
 		break;
 	}
 
@@ -748,7 +750,7 @@ void CatModel::drawWorld()
 	if (mood == 3) eyeOpen = eyeOpen * 0.85f + 0.15f; // wider
 
 	float whiskerTwitch = moodPlay * anim2 * 8.0f + moodAlert * 3.0f;
-	float earFlick = (mood == 3) ? anim2 * 12.0f : ((animMode == 0) ? anim * 6.0f * moodPlay : 0.0f);
+	float earFlick = (mood == 3) ? anim2 * 10.0f : ((animMode == 0) ? anim * 7.0f : 0.0f);
 
 	const float hipAttachY = -0.28f;
 	const float pawR = 0.13f * fluff;
